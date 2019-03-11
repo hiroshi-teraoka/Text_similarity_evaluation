@@ -1,4 +1,17 @@
-# Mecab_win
+# テキストの類似度を評価
+
+```
+$ git clone https://github.com/hiroshi-teraoka/Text_similarity_evaluation.git
+$ cd Text_similarity_evaluation
+$ virtualenv venv
+
+例）以下の様に、input用エクセルファイル（記載方法は中身参照）とoutput用パスを引数にして実行すると評価値をエクセルファイルで出力します
+$ python text_evaluation.py input_excel/input_指向性_3_8.xlsx output_excel/output_指向性_3_8.xlsx
+```
+
+
+
+# Mecabをインストール
 
 MecabをWindows10へインストールする手順  
 参考サイト：https://qiita.com/yuki12/items/9723f60907508b11504b  
@@ -14,17 +27,7 @@ $ pip install mecab-python-windows
 
 <img src="README_IMAGE/mecab0.png">  
 
-<img src="README_IMAGE/mecab1.png">  
-
-<img src="README_IMAGE/mecab2.png">  
-
-<img src="README_IMAGE/mecab3.png">  
-
-<img src="README_IMAGE/mecab4.png">  
-
-<img src="README_IMAGE/mecab5.png">  
-
-<img src="README_IMAGE/mecab6.png">  
+**環境変数にパスを通す**
 
 **以下のパスに今回インストールされていたので環境パス指定しています（ここは人によって変わる可能性もある）**
 <img src="README_IMAGE/mecab7.png">  
