@@ -27,17 +27,7 @@ $ pip install mecab-python-windows
 
 <img src="README_IMAGE/mecab0.png">  
 
-<img src="README_IMAGE/mecab1.png">  
-
-<img src="README_IMAGE/mecab2.png">  
-
-<img src="README_IMAGE/mecab3.png">  
-
-<img src="README_IMAGE/mecab4.png">  
-
-<img src="README_IMAGE/mecab5.png">  
-
-<img src="README_IMAGE/mecab6.png">  
+**環境変数にパスを通す**
 
 **以下のパスに今回インストールされていたので環境パス指定しています（ここは人によって変わる可能性もある）**
 <img src="README_IMAGE/mecab7.png">  
