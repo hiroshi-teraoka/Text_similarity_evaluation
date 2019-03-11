@@ -6,7 +6,7 @@ $ cd Text_similarity_evaluation
 $ virtualenv venv
 
 例）以下の様に、input用エクセルファイル（記載方法は中身参照）とoutput用パスを引数にして実行すると評価値をエクセルファイルで出力します
-$ python text_evaluation.py input_excel/input_指向性.xlsx output_excel/output_指向性.xlsx
+$ python text_evaluation.py input_excel/input_指向性_3_8.xlsx output_excel/output_指向性_3_8.xlsx
 ```
 
 
