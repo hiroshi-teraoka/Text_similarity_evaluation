@@ -13,7 +13,7 @@ class TextEvaluation:
         self.output_file = output_file
         # input_file_name = 'input_excel/input_files.xlsx'
 
-    def convert_excel_to_df(self):
+    def convert_excel_to_df_and_evaluate(self):
         """エクセルをDataFrameへ"""
         input_df = pd.ExcelFile(self.input_file).parse()
 
@@ -41,8 +41,12 @@ class TextEvaluation:
 
 
 if __name__ == '__main__':
+    """
+    実行方法
+    (venv)$ python mimiClient_ASRtest.py 'application_id' 'client_id' 'client_secletkey' '入力音声ファイルパス.raw' '出力音声ファイルパス(output_folder/ .txtなど)'
+    """
     args = sys.argv
     # print(args[1], args[2])
     text_evaluation = TextEvaluation(args[1], args[2])
-    input_data = text_evaluation.convert_excel_to_df()
+    input_data = text_evaluation.convert_excel_to_df_and_evaluate()
     text_evaluation.output_df_to_excel(input_data)
