@@ -19,15 +19,15 @@ class TextEvaluation:
 
         bleu_ja = BLEUCalculator(lang="ja")
         rouge = RougeCalculator(lang="ja")
-        output_dict = {'blue':[], 'rouge_1':[], 'rouge_2':[], 'rouge_long':[]}
+        output_dict = {'bleu':[], 'rouge_1':[], 'rouge_2':[], 'rouge_long':[]}
         for index, row in input_df.iterrows():
-            output_dict['blue'].append(bleu_ja.bleu(row['ref_text'], row['input_text']))  # BLEUでの評価
+            output_dict['bleu'].append(bleu_ja.bleu(row['ref_text'], row['input_text']))  # BLEUでの評価
             output_dict['rouge_1'].append(rouge.rouge_n(summary=row['ref_text'], references=row['input_text'], n=1))  # ROUGE(n1)での評価
             output_dict['rouge_2'].append(rouge.rouge_n(summary=row['ref_text'], references=row['input_text'], n=2))  # ROUGE(n2)での評価
             output_dict['rouge_long'].append(rouge.rouge_l(summary=row['ref_text'], references=row['input_text']))       # ROUGE(rouge_l)での評価
             # input_microphone_df['rouge_be'] = rouge.rouge_be(summary=row['ref_text'], references=row['input_text'])      # ROUGE(rouge_be)での評価
 
-        input_df['blue']=output_dict['blue']
+        input_df['bleu']=output_dict['blue']
         input_df['rouge_1']=output_dict['rouge_1']
         input_df['rouge_2']=output_dict['rouge_2']
         input_df['rouge_long']=output_dict['rouge_long']
