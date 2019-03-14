@@ -27,7 +27,7 @@ class TextEvaluation:
             output_dict['rouge_long'].append(rouge.rouge_l(summary=row['ref_text'], references=row['input_text']))       # ROUGE(rouge_l)での評価
             # input_microphone_df['rouge_be'] = rouge.rouge_be(summary=row['ref_text'], references=row['input_text'])      # ROUGE(rouge_be)での評価
 
-        input_df['bleu']=output_dict['blue']
+        input_df['bleu']=output_dict['bleu']
         input_df['rouge_1']=output_dict['rouge_1']
         input_df['rouge_2']=output_dict['rouge_2']
         input_df['rouge_long']=output_dict['rouge_long']
